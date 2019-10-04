@@ -4,7 +4,7 @@
 	session_start(); // enables the use of sessions.
 
 	$timezone = date_default_timezone_set("America/Los_Angeles");
-  // $con = mysqli_connect("localhost", "root", "root", "asset_tool");
+  //$con = mysqli_connect("localhost", "root", "root", "asset_tool");
 
 	//Get Heroku ClearDB connection information
 $cleardb_url      = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -17,7 +17,7 @@ $cleardb_db       = substr($cleardb_url["path"],1);
 $active_group = 'default';
 $query_builder = TRUE;
 
-$con['default'] = array(
+$db['default'] = array(
     'dsn'    => '',
     'hostname' => $cleardb_server,
     'username' => $cleardb_username,
