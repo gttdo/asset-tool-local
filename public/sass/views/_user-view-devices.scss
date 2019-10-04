@@ -1,0 +1,26 @@
+
+.userDashboard {
+.wrapper {
+
+&_sub--header {
+  padding: 3rem;
+}
+
+&_view--assets {
+  padding: 3rem;
+}
+
+.card {
+
+  &-img-top {
+    max-height: 28vh;
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  &-text {
+    color: $color-black-2;
+  }
+  }
+}
+}

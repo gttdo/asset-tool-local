@@ -1,0 +1,89 @@
+<?php
+	ini_set('display_errors', 1);
+	error_reporting(E_ALL);
+
+	include("../includes/config.php");
+	include("../includes/classes/Device.php");
+	//include("../includes/classes/Loans.php");
+
+	if(isset($_GET['deviceID'])) {
+		$deviceID = $_GET['deviceID'];
+		//echo $deviceID;
+	}
+	else {
+		echo "ID is not set";
+	}
+
+	$deviceQuery = "SELECT * FROM `devices` WHERE id='$deviceID'";
+	$devicesResult = mysqli_query($con, $deviceQuery);
+	$devices = mysqli_fetch_array($devicesResult);
+	//$deviceID = $devices['id'];
+
+	//$loans = new Loans($con, $devices['id']);
+
+	$loanQuery = "SELECT * FROM `loans` WHERE deviceName='$deviceID'";
+	$loanResult = mysqli_query($con, $loanQuery);
+	$loan = mysqli_fetch_array($loanResult);
+	$loanerID = $loan['userName']; // userName is the email number
+
+	$userQuery = "SELECT * FROM `users` WHERE id='$loanerID'";
+	$userResult = mysqli_query($con, $userQuery);
+	$user = mysqli_fetch_array($userResult);
+
+
+
+	include("partials/header.php");
+	include("partials/navigation-info-pages.php");
+?>
+
+<section class="viewDevice">
+
+		<div class="container box-shadow">
+			<a class="btn black_button" href="/wcd-asset-tool/views/admin-view-devices.php">Go Back</a>
+
+			<div class="row">
+				<div class="col bold viewDevice_top"><h2 class="text-center"><?php echo $devices['availability'] ?></h2></div>
+			</div>
+			<div class="row">
+					<div class="col m-auto text-center viewDevice_middle">
+						<img class="viewDevice_middle-image" src="<?php echo $devices['image'] ?>" alt="" />
+
+					</div>
+					<div class="col container">
+						<p class="list header_primary">
+							<span class="bold">Device Name:</span>
+							<?php echo $devices['name'] ?>
+						</p>
+						<p class="list font_20">
+							<span class="bold">Serial No:</span>
+							<?php echo $devices['serialNo'] ?>
+						</p>
+						<p class="list font_20">
+							<span class="bold">Notes:</span>
+							<?php echo $devices['notes'] ?>
+						</p>
+						<p class="list font_20">
+							<span class="bold">Loaner:</span>
+							<?php echo $user['email']?>
+						</p>
+						<p class="list font_20">
+							<span class="bold">Checkout Date:</span>
+							<?php echo $loan['checkout'] ?>
+						</p>
+						<p class="list font_20">
+							<span class="bold">Checkin Date:</span>
+							<?php echo $loan['checkin']; ?>
+						</p>
+						<p class="edit_buttons">
+							<a href="/wcd-asset-tool/views/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" class="btn-alt font_22"><i class="fas fa-edit"></i></a>
+						</p>
+
+
+
+
+					</div>
+			</div>
+		</div>
+	</section>
+
+<?php include("partials/footer.php"); ?>
