@@ -1,9 +1,6 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
 
 	//$device = new Device($con);
 	//$con = mysqli_connect("localhost", "root", "root", "asset_tool");
@@ -11,8 +8,8 @@
 	$query = "SELECT * FROM `devices`";
 	$result = mysqli_query($con, $query);
 
-	include("partials/header.php");
-	include("partials/navigation.php");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 
 ?>
 <section class="adminDashboard">
@@ -28,7 +25,7 @@
 			</ul>
 		</div>
 		<?php
-			include("partials/table-header-admin-devices.php");
+			include("../partials/table-header-admin-devices.php");
 
 			if($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
@@ -71,4 +68,4 @@
 		</div>
 	</section>
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

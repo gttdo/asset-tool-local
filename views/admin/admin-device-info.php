@@ -1,14 +1,9 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
-	//include("../includes/classes/Loans.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
 
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET['deviceID'];
-		//echo $deviceID;
 	}
 	else {
 		echo "ID is not set";
@@ -17,9 +12,6 @@
 	$deviceQuery = "SELECT * FROM `devices` WHERE id='$deviceID'";
 	$devicesResult = mysqli_query($con, $deviceQuery);
 	$devices = mysqli_fetch_array($devicesResult);
-	//$deviceID = $devices['id'];
-
-	//$loans = new Loans($con, $devices['id']);
 
 	$loanQuery = "SELECT * FROM `loans` WHERE deviceName='$deviceID'";
 	$loanResult = mysqli_query($con, $loanQuery);
@@ -32,14 +24,14 @@
 
 
 
-	include("partials/header.php");
-	include("partials/navigation-info-pages.php");
+	include("../partials/a2-header.php");
+	include("../partials/a2-navigation.php");
 ?>
 
 <section class="viewDevice">
 
 		<div class="container box-shadow">
-			<a class="btn black_button" href="/wcd-asset-tool/views/admin-view-devices.php">Go Back</a>
+			<a class="btn black_button" href="/wcd-asset-tool/views/admin/admin-view-devices.php">Go Back</a>
 
 			<div class="row">
 				<div class="col bold viewDevice_top"><h2 class="text-center"><?php echo $devices['availability'] ?></h2></div>
@@ -75,7 +67,7 @@
 							<?php echo $loan['checkin']; ?>
 						</p>
 						<p class="edit_buttons">
-							<a href="/wcd-asset-tool/views/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" class="btn-alt font_22"><i class="fas fa-edit"></i></a>
+							<a href="/wcd-asset-tool/views/admin/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" class="btn-alt font_22"><i class="fas fa-edit"></i></a>
 						</p>
 
 
@@ -86,4 +78,4 @@
 		</div>
 	</section>
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

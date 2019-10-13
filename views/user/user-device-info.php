@@ -1,9 +1,6 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
 
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET["deviceID"];
@@ -38,8 +35,8 @@
 		header("Refresh:0");
 	}
 
-	include("partials/header.php");
-	include("partials/navigation-info-pages.php");
+	include("../partials/u2-header.php");
+	include("../partials/u2-navigation.php");
 
 
 ?>
@@ -49,7 +46,7 @@
 	<section class="viewDevice">
 
 		<div class="container box-shadow">
-			<a class="btn black_button" href="/wcd-asset-tool/views/user-view-devices.php">Go Back</a>
+			<a class="btn black_button" href="/wcd-asset-tool/views/user/user-view-devices.php">Go Back</a>
 
 			<div class="row">
 				<div class="col bold viewDevice_top"><h2 class="text-center"><?php echo $device['availability'] ?></h2></div>
@@ -84,8 +81,8 @@
 							<?php echo $loan['checkin'] ?>
 						</p>
 						<p>
-							<a id="loan_button" class="btn btn-outline-info font_15" href="/wcd-asset-tool/views/checkout.php/<?php echo '?deviceID=' . $device['id'] ?>">Loan Device</a>
-							<form class="form_return_button" action="/wcd-asset-tool/views/user-device-info.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST">
+							<a id="loan_button" class="btn btn-outline-info font_15" href="/wcd-asset-tool/views/user/checkout.php/<?php echo '?deviceID=' . $device['id'] ?>">Loan Device</a>
+							<form class="form_return_button" action="/wcd-asset-tool/views/user/user-device-info.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST">
 								<button id="return_button" class="btn btn-outline-success font_15" name="checkin_button" type="submit">Return Device</button>
 							</form>
 
@@ -113,4 +110,4 @@
 		}
 	?>
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

@@ -5,17 +5,18 @@
   include("includes/config.php");
   include("includes/classes/Account.php");
   include("includes/classes/Constants.php");
-  //
+
   $account = new Account($con);
-  //
+
   include("includes/handlers/login-handler.php");
-  //
+  include("views/partials/main-header.php");
+
   function getInputValue($name) {
     if(isset($_POST[$name])) {
       echo $_POST[$name];
     }
   }
-  //
+
   if(isset($_SESSION['userLoggedIn'])) {
     $userLoggedIn = $_SESSION['userLoggedIn'];
   }
@@ -24,29 +25,6 @@
   }
 ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home | Login</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/main.css">
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-  <div class="container-fluid">
-    <a class="navbar-brand header_one" href="/asset-tool-php.php">
-      <img class="navbar_logo" src="public/images/wcd_favicon.png" alt="">
-    </a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <div class="container">
 	<section id="landing">
@@ -69,7 +47,7 @@
       <div class="signup_container">
         <a class="signup_container-signup font_15" href="register.php">Sign Up</a>
 
-        <a class="signup_container-forgot font_15" href="/">Forgot Password?</a>
+        <a class="signup_container-forgot font_15" href="/">Help</a>
       </div>
 
 		</form>
@@ -79,5 +57,5 @@
 
 
 <?php
-  include("views/partials/footer.php");
+  include("views/partials/main-footer.php");
 ?>

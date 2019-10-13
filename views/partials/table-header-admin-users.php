@@ -1,5 +1,5 @@
 <div class="button_container mb-5 container-fluid">
-  <a href="/wcd-asset-tool/views/add-user.php" class="btn black_button">Add User</a>
+  <a href="/wcd-asset-tool/views/admin/add-user.php" class="btn black_button">Add User</a>
 </div>
 <table class="table table-striped table-borderless">
   <thead class="thead-dark">

@@ -1,23 +1,19 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
-	include("../includes/classes/Constants.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
+	include("../../includes/classes/Constants.php");
 
 	$con = mysqli_connect("localhost", "root", "root", "asset_tool");
 	$device = new Device($con);
 
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET['deviceID'];
-		echo $deviceID;
 	}
 	else {
 		echo "ID is not set";
 	}
 
-	include("../includes/handlers/device-handler.php");
+	include("../../includes/handlers/device-handler.php");
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
@@ -37,16 +33,16 @@
 		$editDeviceQuery = "UPDATE devices SET name='$deviceName', image='$deviceImage', serialNo='$deviceSerial', availability='$deviceAvail', notes='$deviceNotes', category='$deviceCat' WHERE id='$deviceID'";
 		$editDeviceResult = mysqli_query($con, $editDeviceQuery);
 
-		header("Location: /wcd-asset-tool/views/admin-view-devices.php");
+		header("Location: /wcd-asset-tool/views/admin/admin-view-devices.php");
 
 	}
 
-	include("partials/header.php");
-	include("partials/navigation-info-pages.php");
+	include("../partials/a2-header.php");
+	include("../partials/a2-navigation.php");
 ?>
 <section class="editDevice">
 	<div class="container">
-	<div class="row"><a class="btn black_button" href="/wcd-asset-tool/views/admin-view-devices.php">Go Back</a></div>
+	<div class="row"><a class="btn black_button" href="/wcd-asset-tool/views/admin/admin-view-devices.php">Go Back</a></div>
 	<div class="row newDevice_container">
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Edit Device</h1>
 
@@ -93,4 +89,4 @@
 </div>
 </section>
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

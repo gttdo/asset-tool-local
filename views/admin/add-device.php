@@ -1,15 +1,12 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
-	include("../includes/classes/Constants.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
+	include("../../includes/classes/Constants.php");
 
 	$con = mysqli_connect("localhost", "root", "root", "asset_tool");
 	$device = new Device($con);
 
-	include("../includes/handlers/device-handler.php");
+	include("../../includes/handlers/device-handler.php");
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
@@ -17,8 +14,8 @@
 		}
 	}
 
-	include("partials/header.php");
-	include("partials/navigation.php");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 ?>
 
 <section class="newDevice">
@@ -72,4 +69,4 @@
 </div>
 </section>
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

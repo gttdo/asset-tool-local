@@ -1,9 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-include("../includes/config.php");
-include("../includes/classes/Account.php");
+include("../../includes/config.php");
+include("../../includes/classes/Account.php");
 
 $account = new Account($con);
 $con = mysqli_connect("localhost", "root", "root", "asset_tool");
@@ -12,14 +9,14 @@ $query = "SELECT * FROM `users` WHERE id = $id";
 $result = mysqli_query($con, $query);
 
 
-include("partials/header.php");
-include("partials/navigation-info-pages.php");
+include("../partials/a2-header.php");
+include("../partials/a2-navigation.php");
 
 ?>
 <section class="viewUser">
 
 		<div class="container box-shadow">
-			<a class="btn black_button" href="/wcd-asset-tool/views/admin-view-users.php">Go Back</a>
+			<a class="btn black_button" href="/wcd-asset-tool/views/admin/admin-view-users.php">Go Back</a>
 
 			<div class="row">
 				<div class="col bold viewUser_top"><h2 class="text-center">User</h2></div>
@@ -58,7 +55,7 @@ include("partials/navigation-info-pages.php");
 							<?php  echo $userSignupDate ?>
 						</p>
 						<p class="edit_buttons">
-							<a href="/wcd-asset-tool/views/edit-user.php/<?php echo  "?userID=" . $userID ?>" class="btn-alt font_22"><i class="fas fa-edit"></i></a>
+							<a href="/wcd-asset-tool/views/admin/edit-user.php/<?php echo  "?userID=" . $userID ?>" class="btn-alt font_22"><i class="fas fa-edit"></i></a>
 						</p>
 
 						<?php
@@ -75,4 +72,4 @@ include("partials/navigation-info-pages.php");
 		</div>
 
 	</section>
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

@@ -1,9 +1,6 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Account.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Account.php");
 
 	$account = new Account($con);
 	$con = mysqli_connect("localhost", "root", "root", "asset_tool");
@@ -11,8 +8,8 @@
 	$query = "SELECT * FROM `users`";
 	$result = mysqli_query($con, $query);
 
-	include("partials/header.php");
-	include("partials/navigation.php");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 ?>
 
 <section class="viewUsers">
@@ -29,7 +26,7 @@
 			</div>
 
 			<?php
-				include("partials/table-header-admin-users.php");
+				include("../partials/table-header-admin-users.php");
 
 				if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
@@ -60,4 +57,4 @@
 
 
 
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

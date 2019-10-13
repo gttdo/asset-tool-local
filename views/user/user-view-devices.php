@@ -1,9 +1,6 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
-	include("../includes/config.php");
-	include("../includes/classes/Device.php");
+	include("../../includes/config.php");
+	include("../../includes/classes/Device.php");
 
 	// session_destroy(); LOGOUT
 
@@ -14,8 +11,8 @@
 	$displayFilterResults = mysqli_query($con, $displayAllQuery);
 
 
-	include("partials/header.php");
-	include("partials/navigation.php");
+	include("../partials/u-header.php");
+	include("../partials/navigation.php");
 	// Sets the default header to ios
 	$searchedDevice = "ios";
 	if(isset($_POST['searchButton'])) {
@@ -87,4 +84,4 @@
 
 		</div>
 	</section>
-<?php include("partials/footer.php"); ?>
+<?php include("../partials/footer.php"); ?>

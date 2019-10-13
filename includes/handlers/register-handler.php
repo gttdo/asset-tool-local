@@ -1,15 +1,15 @@
 <?php
+
 function sanitizeRegularForm($inputText){
-  $inputText = strip_tags($inputText); // strip HTML tags
-  // $inputText = str_replace($inputText);
   return $inputText;
 }
+
 function sanitizeUsernameForm($inputText){
   $inputText = strip_tags($inputText);
-  // $inputText = str_replace(" ", "", $inputText); // string replace ("find all spaces", "replace with empty string", $for_variable)
-  $inputText = ucfirst(strtolower($inputText)); // uppercase first string, lower case the rest of the string.
+  $inputText = ucfirst(strtolower($inputText));
   return $inputText;
 }
+
 function sanitizePasswordForm($inputText){
   $inputText = strip_tags($inputText);
   return $inputText;
@@ -18,7 +18,7 @@ function sanitizePasswordForm($inputText){
 function sanitizeEmailForm($inputText) {
   $inputText = strip_tags($inputText);
   $inputText = str_replace(" ", "", $inputText);
-  $inputText = ucfirst(strtolower($inputText));
+  $inputText = strtolower($inputText);
   return $inputText;
 }
 
