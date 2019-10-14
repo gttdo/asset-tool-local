@@ -10,6 +10,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 INSERT INTO `users` (image, name, email, passphrase, signupDate, isAdmin)
-VALUES ("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "Jack", "jacpare@gap.com", "password", "2019-09-30", 0),
-("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "Admin", "admin@email.com", "password1", "2019-09-30", 1),
-("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "Jackie", "jackie@email.com", "password2", "2019-09-30", 0);
+VALUES ("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "Admin", "admin@admin.com", "password", "2019-09-30", 0),
+("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "Jane Doe", "someone@email.com", "password", "2019-09-30", 1),
+("https://png.pngtree.com/svg/20170602/0db185fb9c.png", "John Doe", "somebody@email.com", "password", "2019-09-30", 0);

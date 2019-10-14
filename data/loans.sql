@@ -1,0 +1,8 @@
+CREATE TABLE `loans` (
+	`id` INT(5) NOT NULL AUTO_INCREMENT,
+	`deviceName` INT(5) NOT NULL,
+	`userName` INT(5) NOT NULL,
+	`checkin` DATE NOT NULL,
+	`checkout` DATE NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;

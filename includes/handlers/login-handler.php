@@ -8,7 +8,7 @@ if(isset($_POST['login_button'])){
 
   $result = $account->login($email, $password);
 
-  if($result == true && $email == "jacpare@gap.com"){
+  if($result == true && $email == "admin@admin.com"){
 
   $_SESSION['userLoggedIn'] = "Admin";
   header("Location: views/admin/admin-view-devices.php");
