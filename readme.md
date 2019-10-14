@@ -79,6 +79,7 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 - Email confirmation that a user has signed up or checked out/ returned a device to the original user and admin.
 - Improved filter functionality.
 - Improved user experience and design flow.
+- Re-build the frontend with React.
 
 ### :hammer_and_wrench: Admin vs User Frontend
 
