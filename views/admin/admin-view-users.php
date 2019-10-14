@@ -3,7 +3,7 @@
 	include("../../includes/classes/Account.php");
 
 	$account = new Account($con);
-	$con = mysqli_connect("localhost", "root", "root", "asset_tool");
+	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 
 	$query = "SELECT * FROM `users`";
 	$result = mysqli_query($con, $query);

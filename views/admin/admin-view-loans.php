@@ -2,6 +2,7 @@
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
+    //$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
     include("../includes/config.php");
     $getLoansQuery = "SELECT * FROM `loans`";
     $loans = mysqli_query($con, $getLoansQuery);

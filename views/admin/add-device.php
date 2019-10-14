@@ -3,7 +3,7 @@
 	include("../../includes/classes/Device.php");
 	include("../../includes/classes/Constants.php");
 
-	$con = mysqli_connect("localhost", "root", "root", "asset_tool");
+	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$device = new Device($con);
 
 	include("../../includes/handlers/device-handler.php");

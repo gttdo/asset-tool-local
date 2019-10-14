@@ -3,6 +3,7 @@
 	include("../../includes/classes/Device.php");
 
 	$device = new Device($con);
+	
 	include("../../includes/handlers/device-handler.php");
 	include("../partials/u2-header.php");
 	include("../partials/u2-navigation.php");

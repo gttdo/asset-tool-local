@@ -2,6 +2,7 @@
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
 
+	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET["deviceID"];
 	}

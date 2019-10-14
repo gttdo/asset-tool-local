@@ -5,7 +5,7 @@
 	// session_destroy(); LOGOUT
 
 	$device = new Device($con);
-	//$con = mysqli_connect("localhost", "root", "root", "asset_tool");
+	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$defaultDevice = "iOS";
 	$displayAllQuery = "SELECT * FROM devices WHERE category='$defaultDevice'";
 	$displayFilterResults = mysqli_query($con, $displayAllQuery);

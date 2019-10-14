@@ -2,8 +2,9 @@
 include("../../includes/config.php");
 include("../../includes/classes/Account.php");
 
+//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 $account = new Account($con);
-$con = mysqli_connect("localhost", "root", "root", "asset_tool");
+
 $id = $_GET["userID"];
 $query = "SELECT * FROM `users` WHERE id = $id";
 $result = mysqli_query($con, $query);
