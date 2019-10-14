@@ -4,7 +4,7 @@
 ![StackShare](https://img.shields.io/badge/MySQL-Database-brightgreen)
 ![Imgur](https://i.imgur.com/y5kwIlY.png)
 
-> A simple management tool for all of Gap WCD's devices.
+> A simple management tool for devices.
 
 ## Contents
 
@@ -76,7 +76,7 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 
 
 ### :hammer_and_wrench: Future Features
-> I've created this application to help manage devices at Gap WCD and this was the first full stack application using PHP that I've built. It's a constantly improving application so feel free to message me for potential bugs, improvements or ideas! Happy building!
+> This app is constantly improving and growing! Feel free to message me for potential bugs, improvements or ideas! Happy building!
 
 - You can view the current features that I'm building or that I've built on this page:
 ``https://trello.com/b/0IZJINle/asset-management-tool``
