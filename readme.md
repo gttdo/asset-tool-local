@@ -88,4 +88,4 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 - User: Create our own or use an existing one inside the users database:
 ``Email: someone@email.com PW: password``
 
-### :pushpin: pareja.jackie@gmail.com | [jackiepareja.com](www.jackiepareja.com)
+### :pushpin: pareja.jackie@gmail.com | www.jackiepareja.com
