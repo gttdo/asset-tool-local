@@ -25,23 +25,23 @@
 ```
 $ npm install
 ```
-- If you are using Windows OS, node-sass will become incompatible and will run into errors when compile sass. Skip step number 1, and start with step number 2.
+- If you are using Windows as your OS, the node-sass package will become incompatible and will run into errors when compiling SASS. Skip step number 1, and start with step number 2.
 
-2. Clone or download the git repository and delete the package.json file. You will need to initialize npm again and manually download the dev dependencies.
+2. Clone or download the git repository and delete the package.json file. You will need to initialize npm again and manually download the dependencies. Thankfully, there are only two (for now)!
 ```
 $ npm init
 $ npm i -D node-sass nodemon
 ```
-2.1 In your package.json file, copy these scripts in your scripts code block.
+3. In our package.json file, copy these scripts in our scripts code block.
 ```
 "build-css": "node-sass --include-path scss public/sass/main.scss public/css/main.css",
 "watch-css": "nodemon -e scss -x \"npm run build-css\""
 ```
-- "build-css" will compile your scss and build your css file from your main.scss to your main.css.
-- "watch-css" will watch and compile your sass files automatically with nodemon.
-- ``public/sass/main.scss`` and ``public/css/main.css`` are path files located from the root level.
+- "build-css" will compile our main.scss file located in public/sass folders and build our css file to our main.css, located in our public/css folders.
+- "watch-css" will watch and compile our sass files automatically with nodemon.
 
-3. Download and install the free version of MAMP and drop this project folder inside the htdocs folder.
+
+4. Download and install the free version of MAMP and drop this project folder inside the htdocs folder. Our htdocs folder is basically where our project files will live if we want to use MAMP as its server.
 ```
 On Mac, it will be located in:
 Applications > MAMP > htdocs > {project_folder_name}
@@ -51,25 +51,25 @@ C: > MAMP > htdocs > {project_folder_name}
 ```
 
 
-4. Run MAMP and make sure that the Web Server you're using is Apache. Moreover, check that your MAMP settings and ensure that your document root is under:
+5. Run MAMP and make sure that the Web Server is set to Apache. Moreover, our document root should be under where it can look for our project files.
 ```
 MAC: Macintosh HD > Applications > MAMP > htdocs
 
 WINDOWS: C:\\ > MAMP > htdocs
 ```
 
-5. On the MAMP Application, click on "Open WebStart page". On the web page, under the "Tools" dropdown, click on phpMyAdmin. This will be the GUI Frontend of your database. You can run SQL queries to create your database or use the frontend interface.
+6. On the MAMP Application, click on "Open WebStart page". On the web page, under the "Tools" dropdown, click on phpMyAdmin. This will be the GUI Frontend of our database. You can run SQL queries to create our database or use the frontend interface.
 
-6. Create a new database and name it "asset_tool".
+7. Create a new database and name it "asset_tool".
 
-7. In your asset_tool database, create 3 tables by running SQL commands. Click on the "SQL" tab and copy and paste the mysql code under ``users.sql, devices.sql and loans.sql `` one at a time. After each copy and paste, submit the query with "Go".
+8. In our asset_tool database, create 3 tables by running SQL commands. Click on the "SQL" tab and copy and paste the mysql code under ``users.sql, devices.sql and loans.sql `` one at a time. After copying and pasting the SQL commands, submit the query with "Go" and repeat it again for the remaining two sql tables.
 
-8. Lastly, to make sure that your database is connected to your web application, verify that your host, server username, password and database name are declared in your config file. Your config file is inside your includes folder from your root.
+9. Almost there! We're now going to make sure that our database is connected with our web application by verifying our host name, server username, password and database name in our config file. Our config file is inside our /includes folder from our root.
 ```
 $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 ```
 
-9. Head on to your localhost:8888/{project_name} page, create an account and use it to sign in!
+10. Head on to our localhost:8888/{project_name} web page, and you'll see the login page. Create an account and use it to sign in! If you're running into a broken or redirect page, make sure that your localhost url is correct within the folders and index.php file.
 
 
 ### :hammer_and_wrench: Future Features
@@ -85,7 +85,7 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 - Admin: You can login as the admin. You can edit the admin account email under the login-handler.php file inside includes > handlers folder.
 ``Email: admin@admin.com PW: password``
 
-- User: Create your own or use an existing one inside the users database:
+- User: Create our own or use an existing one inside the users database:
 ``Email: someone@email.com PW: password``
 
-### :pushpin: pareja.jackie@gmail.com | jackiepareja.com
+### :pushpin: pareja.jackie@gmail.com | [jackiepareja.com](www.jackiepareja.com)
