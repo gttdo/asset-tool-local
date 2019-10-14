@@ -1,5 +1,7 @@
 # Asset Management Tool
 ![StackShare](https://img.shields.io/badge/wcd-asset%20tool-orange)
+![StackShare](https://img.shields.io/badge/Windows%20OS-Not%20Compatible-red)
+![StackShare](https://img.shields.io/badge/MySQL-Database-brightgreen)
 
 > A simple management tool for all of Gap WCD's devices.
 
