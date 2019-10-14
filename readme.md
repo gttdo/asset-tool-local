@@ -77,11 +77,8 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 ### :hammer_and_wrench: Future Features
 > I've created this application to help manage our devices at work and this was the first full stack application using PHP that I've built. It's very rough and I'm consistently improving and applying more from what I've learned. Feel free to message me for potential bugs, improvements or ideas! Happy building!
 
-- User settings to edit their email, password and add more information to their account.
-- Email confirmation that a user has signed up or checked out/ returned a device to the original user and admin.
-- Improved filter functionality.
-- Improved user experience and design flow.
-- Re-build the frontend with React.
+- You can view the current features that I'm building or that I've built on this page:
+``https://trello.com/b/0IZJINle/asset-management-tool``
 
 ### :hammer_and_wrench: Admin vs User Frontend
 

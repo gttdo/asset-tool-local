@@ -3,7 +3,7 @@
 	include("../../includes/classes/Device.php");
 
 	$device = new Device($con);
-	
+
 	include("../../includes/handlers/device-handler.php");
 	include("../partials/u2-header.php");
 	include("../partials/u2-navigation.php");
@@ -56,12 +56,12 @@
 				<div class="form-group mb_5">
 					<label for="checkout_date" class="font_15">Loan Start Date</label>
 
-					<input id="checkout_date" class="form-control" type="date" name="checkout_date"/>
+					<input id="checkout_date" class="form-control" type="date" name="checkout_date" required />
 				</div>
 				<div class="form-group">
 					<label for="checkin_date" class="font_15">Loan Return Date</label>
 
-					<input id="checkin_date" class="form-control" type="date" name="checkin_date"/>
+					<input id="checkin_date" class="form-control" type="date" name="checkin_date" required />
 				</div>
 
 
