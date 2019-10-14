@@ -13,7 +13,6 @@
 		}
 	}
 
-
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET['deviceID'];
 	}
@@ -66,7 +65,7 @@
 
 
 
-				<button type="submit" name="checkout_button" class="btn btn-lg black_button btn-block m-auto">Submit!</button>
+				<button id="checkout_button" type="submit" name="checkout_button" class="btn btn-lg black_button btn-block m-auto">Submit!</button>
 			</form>
 
 		</div>
@@ -75,3 +74,5 @@
 </div>
 </section>
 <?php include("../partials/footer.php"); ?>
+<script src="../../../public/js/test.js">
+</script>
