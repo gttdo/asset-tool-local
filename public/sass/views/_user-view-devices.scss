@@ -1,26 +1,30 @@
-
 .userDashboard {
-.wrapper {
+  .wrapper {
 
-&_sub--header {
-  padding: 3rem;
-}
-
-&_view--assets {
-  padding: 3rem;
-}
-
-.card {
-
-  &-img-top {
-    max-height: 28vh;
-    width: 70%;
-    margin: 2rem auto;
+  &_sub--header {
+    padding: 3rem;
   }
 
-  &-text {
-    color: $color-black-2;
+  &_view--assets {
+    padding: 3rem;
   }
+
+  .card {
+    min-height: 32rem;
+    padding-bottom: 3rem;
+
+    &-img-top {
+      display: block;
+      max-width: 10rem;
+      max-height: 9.5rem;
+      width: auto;
+      height: auto;
+      margin: 2rem auto;
+    }
+
+    &-text {
+      color: $color-black-2;
+      }
+    }
   }
-}
 }

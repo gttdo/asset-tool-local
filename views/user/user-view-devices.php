@@ -31,7 +31,7 @@
 				<h3 class="header_primary"><?php echo strtoupper($searchedDevice) ?> ASSETS</h3>
 				<div class="ml-auto">
 					<form method="POST" action"" class="filter">
-						<select class="font_15 filter_options" name="filter_options">
+						<select class="font_15 filter_options" name="filter_options" required>
 							<option value="" disabled selected>Filter Devices</option>
 							<option value="ios">iOS</option>
 							<option value="android">Android</option>
@@ -57,7 +57,7 @@
 				?>
 					<div class="col-md-3 col-sm-6 column_grid_container">
 						<div class="card">
-							<img class="card-img-top" src="<?php echo $deviceImage ?>" alt="">
+							<img width="400px" height="400px" class="card-img-top" src="<?php echo $deviceImage ?>" alt="">
 							<div class="card-body">
 								<h4 class="card-title">
 									<?php echo $deviceName ?>

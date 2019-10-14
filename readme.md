@@ -75,7 +75,7 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 
 
 ### :hammer_and_wrench: Future Features
-> I've created this application to help manage our devices at work and this was the first full stack application using PHP that I've built. It's very rough and I'm consistently improving and applying more from what I've learned. Feel free to message me for potential bugs, improvements or ideas! Happy building!
+> I've created this application to help manage devices at Gap WCD and this was the first full stack application using PHP that I've built. It's a constantly improving application so feel free to message me for potential bugs, improvements or ideas! Happy building!
 
 - You can view the current features that I'm building or that I've built on this page:
 ``https://trello.com/b/0IZJINle/asset-management-tool``
@@ -88,4 +88,4 @@ $con  =  mysqli_connect("localhost", "root", "root", "asset_tool");
 - User: Create our own or use an existing one inside the users database:
 ``Email: someone@email.com PW: password``
 
-### :pushpin: pareja.jackie@gmail.com | www.jackiepareja.com
+### :pushpin: :turtle: pareja.jackie@gmail.com | www.jackiepareja.com

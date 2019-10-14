@@ -1,13 +1,11 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
 	include("../../includes/config.php");
 	include("../../includes/classes/Account.php");
   include("../../includes/classes/Constants.php");
   $account = new Account($con);
-
   include("../../includes/handlers/register-handler.php");
+	include("../partials/a2-header.php");
+	include("../partials/a2-navigation.php");
 
 	if(isset($_GET['userID'])) {
 		$userID = $_GET['userID'];
@@ -35,8 +33,7 @@
 		header("Location: /wcd-asset-tool/views/admin/admin-view-users.php");
 	}
 
-	include("../partials/a2-header.php");
-	include("../partials/a2-navigation.php");
+
 ?>
 <section class="editUser">
 	<div class="container">

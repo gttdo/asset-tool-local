@@ -209,7 +209,8 @@ hr {
   border-radius: 5px; }
 
 .viewDevice_middle-image {
-  width: 50%; }
+  width: 40%;
+  min-height: 35rem; }
 
 .edit_buttons {
   text-align: right; }
@@ -287,10 +288,15 @@ hr {
 .userDashboard .wrapper_view--assets {
   padding: 3rem; }
 
-.userDashboard .wrapper .card-img-top {
-  max-height: 28vh;
-  width: 70%;
-  margin: 2rem auto; }
-
-.userDashboard .wrapper .card-text {
-  color: #343a40; }
+.userDashboard .wrapper .card {
+  min-height: 32rem;
+  padding-bottom: 3rem; }
+  .userDashboard .wrapper .card-img-top {
+    display: block;
+    max-width: 10rem;
+    max-height: 9.5rem;
+    width: auto;
+    height: auto;
+    margin: 2rem auto; }
+  .userDashboard .wrapper .card-text {
+    color: #343a40; }
