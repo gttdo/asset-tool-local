@@ -75,5 +75,4 @@
 </div>
 </section>
 <?php include("../partials/footer.php"); ?>
-<script src="../../../public/js/test.js">
-</script>
+<script src="../../../public/js/app.js"></script>

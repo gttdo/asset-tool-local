@@ -12,6 +12,12 @@
 		box-shadow: 0 0 0 $color-black-3;
 	}
 
+	&:disabled {
+		color: $color-grey-2;
+		border: 1.4px solid $color-grey-2;
+		background-color: transparent;
+	}
+
 	&-alt {
 		color: $color-black-2;
 

@@ -22,15 +22,8 @@
 	$userQuery = "SELECT * FROM users WHERE id='$loanerID'";
 	$userResult = mysqli_query($con, $userQuery);
 	$user = mysqli_fetch_array($userResult);
-	echo $user['email'] . "<br>";
-	echo $userLoggedIn . "<br>";
 
-	//echo "availability: " . $device['availability'] . "<br>";
-	//echo "device id " . $deviceID;
 
-	if($device['availability'] != "Available") {
-		echo "true";
-	}
 
 
 
@@ -47,9 +40,6 @@
 
 		header("Refresh:0");
 	}
-
-
-
 
 ?>
 
@@ -95,7 +85,8 @@
 						<p>
 							<a id="loan_button" class="btn btn-outline-info font_15" href="/wcd-asset-tool/views/user/checkout.php/<?php echo '?deviceID=' . $device['id'] ?>">Loan Device</a>
 							<form class="form_return_button" action="/wcd-asset-tool/views/user/user-device-info.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST">
-								<button id="return_button" class="btn btn-outline-success font_15" name="checkin_button" type="submit">Return Device</button>
+								<button id="return_button" class="btn btn-outline-success font_15" name="checkin_button" type="submit" <?php if($device['availability'] != "Available" && $userLoggedIn != $user['email']) {
+									?> disabled <?php } ?> >Return Device</button>
 							</form>
 
 
