@@ -1,15 +1,14 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Account.php");
-
 	$account = new Account($con);
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 
 	$query = "SELECT * FROM `users`";
 	$result = mysqli_query($con, $query);
 
-	include("../partials/a-header.php");
-	include("../partials/navigation.php");
+
 ?>
 
 <section class="viewUsers">

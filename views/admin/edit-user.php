@@ -5,7 +5,6 @@
 	include("../../includes/config.php");
 	include("../../includes/classes/Account.php");
   include("../../includes/classes/Constants.php");
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
   $account = new Account($con);
 
   include("../../includes/handlers/register-handler.php");

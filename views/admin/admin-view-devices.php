@@ -1,16 +1,11 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
-
-	//$device = new Device($con);
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
-
-	$query = "SELECT * FROM `devices`";
-	$result = mysqli_query($con, $query);
-
 	include("../partials/a-header.php");
 	include("../partials/navigation.php");
 
+	$query = "SELECT * FROM `devices`";
+	$result = mysqli_query($con, $query);
 ?>
 <section class="adminDashboard">
 	<div class="container-fluid">

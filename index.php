@@ -57,5 +57,5 @@
 
 
 <?php
-  include("views/partials/main-footer.php");
+  include("views/partials/footer.php");
 ?>

@@ -57,5 +57,5 @@ error_reporting(E_ALL);
 </div>
 </section>
 <?php
-include("views/partials/main-footer.php");
+include("views/partials/footer.php");
 ?>

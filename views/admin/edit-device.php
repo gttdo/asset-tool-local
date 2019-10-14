@@ -2,9 +2,10 @@
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
 	include("../../includes/classes/Constants.php");
-
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$device = new Device($con);
+	include("../../includes/handlers/device-handler.php");
+	include("../partials/a2-header.php");
+	include("../partials/a2-navigation.php");
 
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET['deviceID'];
@@ -13,7 +14,7 @@
 		echo "ID is not set";
 	}
 
-	include("../../includes/handlers/device-handler.php");
+
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
@@ -37,8 +38,7 @@
 
 	}
 
-	include("../partials/a2-header.php");
-	include("../partials/a2-navigation.php");
+
 ?>
 <section class="editDevice">
 	<div class="container">

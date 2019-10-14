@@ -1,15 +1,11 @@
 <?php
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
-
 	include("../../includes/config.php");
 	include("../../includes/classes/Account.php");
 	include("../../includes/classes/Constants.php");
-
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$account = new Account($con);
-
 	include("../../includes/handlers/register-handler.php");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
@@ -17,8 +13,7 @@
 		}
 	}
 
-	include("../partials/a-header.php");
-	include("../partials/navigation.php");
+
 ?>
 <section class="newUser">
 	<div class="container">

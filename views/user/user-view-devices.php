@@ -1,19 +1,16 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
-
+		$device = new Device($con);
+	include("../partials/u-header.php");
+	include("../partials/navigation.php");
 	// session_destroy(); LOGOUT
 
-	$device = new Device($con);
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$defaultDevice = "iOS";
 	$displayAllQuery = "SELECT * FROM devices WHERE category='$defaultDevice'";
 	$displayFilterResults = mysqli_query($con, $displayAllQuery);
 
 
-	include("../partials/u-header.php");
-	include("../partials/navigation.php");
-	// Sets the default header to ios
 	$searchedDevice = "ios";
 	if(isset($_POST['searchButton'])) {
 		$searchedDevice = $_POST['filter_options'];

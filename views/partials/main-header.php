@@ -13,6 +13,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
   <div class="container-fluid">
+    <span style="color: white;" class="mr-3 font_20">BETA</span>
     <a class="navbar-brand header_one" href="/asset-tool-php.php">
       <img class="navbar_logo" src="public/images/wcd_favicon.png" alt="">
     </a>
