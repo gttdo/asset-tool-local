@@ -1,7 +1,7 @@
 <?php
 if(isset($_SESSION['userLoggedIn'])) {
   $userLoggedIn = $_SESSION['userLoggedIn'];
-  // echo $userLoggedIn;
+
 }
 else {
   header("Location: index.php");

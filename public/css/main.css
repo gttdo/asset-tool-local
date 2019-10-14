@@ -73,6 +73,9 @@ hr {
 .w-100 {
   width: 100%; }
 
+.white {
+  color: white; }
+
 .btn {
   cursor: pointer;
   outline: none; }

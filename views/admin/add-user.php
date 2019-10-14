@@ -18,7 +18,7 @@
 	}
 
 	include("../partials/a-header.php");
-	include("../partials/navigation-info-pages.php");
+	include("../partials/navigation.php");
 ?>
 <section class="newUser">
 	<div class="container">
