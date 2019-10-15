@@ -36,10 +36,10 @@ error_reporting(E_ALL);
 //   $email_headers = "From: Admin Asset Tool" . "\r\n" . "Reply-To: " . $admin_email . "\r\n" . "X-Mailer: PHP/" . phpversion();
 //   @mail($sendAll, $email_subject, $email_message, $email_headers);
 //   ?>
-//   <div class="m-auto success_msg">
+<!-- //   <div class="m-auto success_msg">
 //     <span class="font_20 m-auto success_msg-text">Thank you for sending a support ticket. Someone will be in touch shortly.</span>
-//   </div>
-// <?php
+//   </div> -->
+   <?php
 // }
 // ?>
   <section class="newUser">
