@@ -2,30 +2,26 @@
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
 	include("../../includes/classes/Constants.php");
-
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	$device = new Device($con);
-
 	include("../../includes/handlers/device-handler.php");
+	include("../partials/a-header.php");
+	include("../partials/navigation.php");
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
 			echo $_POST[$name];
 		}
 	}
-
-	include("../partials/a-header.php");
-	include("../partials/navigation.php");
 ?>
 
 <section class="newDevice">
 	<div class="container">
 	<div class="row"><a class="btn black_button" href="admin-view-devices.php">Go Back</a></div>
-	<div class="row newDevice_container">
+	<div class="row newDevice_container form_container">
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Create New Device</h1>
 
 
-		<div style="width: 30%; margin: auto;">
+		<div class="form_container-wrapper">
 			<form action="add-device.php" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group">
 					<?php echo $device->getError(Constants::$deviceNameChar); ?>

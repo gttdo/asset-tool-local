@@ -1,9 +1,7 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
-
 	$device = new Device($con);
-
 	include("../../includes/handlers/device-handler.php");
 	include("../partials/u2-header.php");
 	include("../partials/u2-navigation.php");
@@ -47,20 +45,18 @@
 <section class="newUser">
 	<div class="container">
 	<div class="row"><a class="btn black_button" href="/wcd-asset-tool/views/user/user-view-devices.php">Go Back</a></div>
-	<div class="row newUser_container">
+	<div class="row newUser_container form_container">
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Checkout Device</h1>
 
 
-		<div style="width: 30%; margin: auto;">
+		<div class="form_container-wrapper">
 			<form action="/wcd-asset-tool/views/user/checkout.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group mb_5">
 					<label for="checkout_date" class="font_15">Loan Start Date</label>
-
 					<input id="checkout_date" class="form-control" type="date" name="checkout_date" required />
 				</div>
 				<div class="form-group">
 					<label for="checkin_date" class="font_15">Loan Return Date</label>
-
 					<input id="checkin_date" class="form-control" type="date" name="checkin_date" required />
 				</div>
 

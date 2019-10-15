@@ -47,7 +47,7 @@
       <div class="signup_container">
         <a class="signup_container-signup font_15" href="register.php">Sign Up</a>
 
-        <a class="signup_container-forgot font_15" href="help.php">Help</a>
+        <a class="signup_container-forgot font_15" href="support_ticket.php">Help</a>
       </div>
 
 		</form>

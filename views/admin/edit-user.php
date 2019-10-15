@@ -36,13 +36,13 @@
 
 ?>
 <section class="editUser">
-	<div class="container">
+	<div class="container form_container">
 	<div class="row"><a class="btn black_button" href="/wcd-asset-tool/views/admin/admin-view-users.php">Go Back</a></div>
-	<div class="row newUser_container">
+	<div class="row newUser_container form_container">
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Edit User</h1>
 
 
-		<div style="width: 30%; margin: auto;">
+		<div class="form_container-wrapper">
 			<form action="/wcd-asset-tool/views/admin/edit-user.php/<?php echo  "?userID=" . $userID ?>" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group">
 					<?php echo $account->getError(Constants::$imageFiletype); ?>

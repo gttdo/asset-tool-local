@@ -41,12 +41,12 @@
 
 ?>
 <section class="editDevice">
-	<div class="container">
+	<div class="container form_container">
 	<div class="row"><a class="btn black_button" href="/wcd-asset-tool/views/admin/admin-view-devices.php">Go Back</a></div>
-	<div class="row newDevice_container">
+	<div class="row form_container">
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Edit Device</h1>
 
-		<div style="width: 30%; margin: auto;">
+		<div class="form_container-wrapper">
 			<form action="/wcd-asset-tool/views/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group">
 					<label class="font_15" for="device_name">Name:</label>

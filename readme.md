@@ -24,13 +24,13 @@
 - SASS
 
 ### :hammer_and_wrench: Setup
-1. Clone or download the git repository and install the essential node packages using this command:
+1. Fork the git repository and install the essential node packages using this command:
 ```
 $ npm install
 ```
 - If you are using Windows as your OS, the node-sass package will become incompatible and will run into errors when compiling SASS. Skip step number 1, and start with step number 2.
 
-2. Clone or download the git repository and delete the package.json file. You will need to initialize npm again and manually download the dependencies. Thankfully, there are only two (for now)!
+2. Fork the git repository and delete the package.json file. You will need to initialize npm again and manually download the dependencies. Thankfully, there are only two (for now)!
 ```
 $ npm init
 $ npm i -D node-sass nodemon
