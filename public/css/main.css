@@ -51,6 +51,12 @@ a {
 .font_13 {
   font-size: 1.3rem; }
 
+.success_msg {
+  text-align: center;
+  display: block; }
+  .success_msg-text {
+    color: green; }
+
 hr {
   width: 100%;
   border: 1px solid #C4C4C4; }
