@@ -175,16 +175,19 @@ hr {
 .landing {
   position: relative; }
   .landing_form {
-    width: 50rem;
-    height: 50%;
+    width: 50%;
     padding: 6rem;
     margin: 10rem auto;
     box-shadow: 0 0 8px rgba(51, 51, 51, 0.15);
     border-radius: 5px;
     border: 1px solid #eee; }
+    @media (max-width: 499px) {
+      .landing_form {
+        width: 100%; } }
 
 .form_label {
-  margin-top: .5rem; }
+  margin-top: .5rem;
+  display: block; }
 
 .form_container {
   box-shadow: 0 0 8px rgba(51, 51, 51, 0.15);
@@ -214,9 +217,10 @@ hr {
   color: white;
   border-radius: 5px; }
 
-.viewDevice_middle-image {
-  width: 40%;
-  min-height: 35rem; }
+.viewDevice_middle {
+  width: 100%; }
+  .viewDevice_middle-image {
+    width: 40%; }
 
 .edit_buttons {
   text-align: right; }
