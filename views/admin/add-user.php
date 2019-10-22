@@ -25,7 +25,7 @@
 		<div class="form_container-wrapper">
 			<form action="add-user.php" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group mb-3">
-					<label class="form_label font_15" for="create_avatar">Full Name:</label>
+					<label class="form_label font_15" for="create_avatar">Image URL:</label>
 					<?php echo $account->getError(Constants::$imageFiletype); ?>
 					<input id="create_avatar" class="form-control" type="text" name="create_avatar" value="<?php getInputValue('create_avatar') ?>" placeholder="Enter image url" required/>
 				</div>
@@ -35,12 +35,12 @@
 					<input id="create_username" class="form-control" type="text" name="create_username" value="<?php getInputValue('create_username') ?>" placeholder="Enter name" required/>
 				</div>
 				<div class="form-group mb-3">
-					<label class="form_label font_15" for="create_useremail">Full Name:</label>
+					<label class="form_label font_15" for="create_useremail">Email:</label>
 					<?php echo $account->getError(Constants::$emailInvalid); ?>
 					<input id="create_useremail" class="form-control" type="email" name="create_useremail" value="<?php getInputValue('create_useremail') ?>" placeholder="Enter email" required/>
 				</div>
 				<div class="form-group mb-5">
-					<label class="form_label font_15" for="create_userpassword">Full Name:</label>
+					<label class="form_label font_15" for="create_userpassword">Password:</label>
 					<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
 					<?php echo $account->getError(Constants::$passwordCharacters); ?>
 					<input id="create_userpassword" class="form-control" type="password" name="create_userpassword" value="<?php getInputValue('create_userpassword') ?>" placeholder="Enter Password" required/>
