@@ -2,7 +2,7 @@
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
 	include("../partials/a-header.php");
-	include("../partials/navigation.php");
+	include("../partials/a1-navigation.php");
 
 	$query = "SELECT * FROM `devices`";
 	$result = mysqli_query($con, $query);

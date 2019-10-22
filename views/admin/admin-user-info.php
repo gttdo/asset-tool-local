@@ -9,9 +9,6 @@ $id = $_GET["userID"];
 $query = "SELECT * FROM `users` WHERE id = $id";
 $result = mysqli_query($con, $query);
 
-
-
-
 ?>
 <section class="viewUser">
 

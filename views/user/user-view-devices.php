@@ -1,9 +1,9 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
-		$device = new Device($con);
+	$device = new Device($con);
 	include("../partials/u-header.php");
-	include("../partials/navigation.php");
+	include("../partials/u1-navigation.php");
 	// session_destroy(); LOGOUT
 
 	$defaultDevice = "iOS";

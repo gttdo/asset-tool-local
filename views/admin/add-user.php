@@ -5,7 +5,7 @@
 	$account = new Account($con);
 	include("../../includes/handlers/register-handler.php");
 	include("../partials/a-header.php");
-	include("../partials/navigation.php");
+	include("../partials/a1-navigation.php");
 
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {

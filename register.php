@@ -15,17 +15,9 @@ error_reporting(E_ALL);
     }
   }
 
-
-
   if(isset($_POST["register_button"])) {
-    $avatar = sanitizeEmailForm($_POST['register_avatar']);
-    $name = sanitizeUsernameForm($_POST['register_name']);
-    $email = sanitizeRegularForm($_POST['register_email']);
-    $password = sanitizePasswordForm($_POST['register_password']);
 
-
-
-    $emailTo_admin = "jacpare@gap.com";
+    $emailTo_admin = "pareja.jackie@gmail.com";
     $email_subject = "WCD Asset Tool New Registration Confirmation";
 
     function died($error) {
@@ -66,25 +58,19 @@ error_reporting(E_ALL);
     $recipients = array($emailTo_admin, $emailTo_newUser);
     $sendAll = implode(',', $recipients);
 
-    $email_headers = "WCD Asset Tool\r\n" . "Reply-To: " . $emailTo_admin . "\r\n" . "X-Mailer: PHP/" . phpversion();
+    $email_headers = "WCD Asset Tool\r\n"."Reply-To: " . $emailTo_admin . "\r\n" . "X-Mailer: PHP/" . phpversion();
     @mail($sendAll, $email_subject, $email_message, $email_headers);
-
-    $wasSuccessful = $account->register($avatar, $name, $email, $password);
-
-    if($wasSuccessful == true) {
-      $_SESSION['userLoggedIn'] = $email;
-      //header("Location: register.php");
-    }
 ?>
-<div class="m-auto success_msg">
-  <span class="font_15 m-auto success_msg-text">Your account was successfully created! <br>
-    Please login to access your account. <br>
-    <a class="btn black_button mt-3 mb-5" href="/tools/wcd-asset-tool/index.php">Login</a>
-  </span>
-</div>
+    <div class="m-auto success_msg">
+      <span class="font_15 m-auto success_msg-text">Your account was successfully created! <br>
+        Please login to access your account. <br>
+        <a class="btn black_button mt-3 mb-5" href="/wcd-asset-tool/index.php">Login</a>
+      </span>
+    </div>
 <?php
   }
 ?>
+
   <section class="newUser">
 	<div class="container">
 	<div class="row"><a class="btn black_button" href="/wcd-asset-tool">Go Back</a></div>
@@ -94,10 +80,10 @@ error_reporting(E_ALL);
 
 
 			<form id="register_form" action="register.php" method="POST" style="margin: 1rem auto" class="pb-4">
-        <div class="form-group mb-3">
+        <div style="display: none;" class="form-group mb-3">
           <label class="form_label font_15" for="register_avatar">Image URL:</label>
           <?php echo $account->getError(Constants::$imageFiletype); ?>
-          <input id="register_avatar" class="form-control" type="text" name="register_avatar" placeholder="image" value="<?php getInputValue('register_avatar') ?>" required/>
+          <input id="register_avatar" class="form-control" type="text" name="register_avatar" placeholder="image" value="https://www.pngarts.com/files/3/Avatar-Transparent-Image.png" required/>
 				</div>
         <div class="form-group mb-3">
           <label class="form_label font_15" for="register_name">Full Name:</label>

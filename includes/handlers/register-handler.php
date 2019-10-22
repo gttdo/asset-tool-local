@@ -6,7 +6,6 @@ function sanitizeRegularForm($inputText){
 
 function sanitizeUsernameForm($inputText){
   $inputText = strip_tags($inputText);
-  $inputText = ucfirst(strtolower($inputText));
   return $inputText;
 }
 
@@ -22,19 +21,6 @@ function sanitizeEmailForm($inputText) {
   return $inputText;
 }
 
-// if(isset($_POST['register_button'])){
-//   $avatar = sanitizeEmailForm($_POST['register_avatar']);
-//   $name = sanitizeUsernameForm($_POST['register_name']);
-//   $email = sanitizeRegularForm($_POST['register_email']);
-//   $password = sanitizePasswordForm($_POST['register_password']);
-//
-//   $wasSuccessful = $account->register($avatar, $name, $email, $password);
-//
-//   if($wasSuccessful == true) {
-//     $_SESSION['userLoggedIn'] = $email;
-//     header("Location: register.php");
-//   }
-// }
 
 if(isset($_POST['create_userButton'])) {
   $avatar = sanitizeEmailForm($_POST['create_avatar']);
@@ -46,6 +32,20 @@ if(isset($_POST['create_userButton'])) {
 
   if($wasSuccessful == true) {
     header("Location: admin-view-users.php");
+  }
+}
+
+if(isset($_POST['register_button'])){
+  $avatar = sanitizeEmailForm($_POST['register_avatar']);
+  $name = sanitizeUsernameForm($_POST['register_name']);
+  $email = sanitizeRegularForm($_POST['register_email']);
+  $password = sanitizePasswordForm($_POST['register_password']);
+
+  $wasSuccessful = $account->register($avatar, $name, $email, $password);
+
+  if($wasSuccessful == true) {
+    $_SESSION['userLoggedIn'] = $email;
+    //header("Location: register.php");
   }
 }
 

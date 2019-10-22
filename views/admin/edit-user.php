@@ -9,14 +9,12 @@
 
 	if(isset($_GET['userID'])) {
 		$userID = $_GET['userID'];
-		// echo $userID;
 	}
 	else {
 		echo "ID is not set";
 	}
   function getInputValue($name) {
  	 if(isset($_POST[$name])) {
- 		 // echo $_POST[$name];
  	 }
   }
 

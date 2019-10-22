@@ -1,11 +1,16 @@
 <?php
 if(isset($_SESSION['userLoggedIn'])) {
   $userLoggedIn = $_SESSION['userLoggedIn'];
-  // echo $userLoggedIn;
 }
 else {
   header("Location: index.php");
 }
+
+$usersQuery = "SELECT * FROM users WHERE email = '$userLoggedIn'";
+$usersQueryResult = mysqli_query($con, $usersQuery);
+$users = mysqli_fetch_array($usersQueryResult);
+$userName = $users['name'];
+
  ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 <div class="container-fluid">
@@ -15,7 +20,7 @@ else {
 </span>
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-item welcomeText font_15">Welcome <?php echo $userLoggedIn ?></li>
+    <li class="nav-item welcomeText font_15">Welcome <?php echo $userName ?></li>
     <li class="nav-item logoutText font_15">
       <a class="logoutText" href="/wcd-asset-tool">Logout</a>
     </li>

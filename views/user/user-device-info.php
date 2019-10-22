@@ -1,10 +1,8 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
 	include("../partials/u2-header.php");
 	include("../partials/u2-navigation.php");
-
 
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET["deviceID"];
@@ -22,10 +20,6 @@
 	$userQuery = "SELECT * FROM users WHERE id='$loanerID'";
 	$userResult = mysqli_query($con, $userQuery);
 	$user = mysqli_fetch_array($userResult);
-
-
-
-
 
 	if(isset($_POST['checkin_button'])) {
 		$loanID = $loan['id'];

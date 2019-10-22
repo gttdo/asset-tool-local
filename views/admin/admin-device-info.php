@@ -1,9 +1,9 @@
 <?php
 	include("../../includes/config.php");
 	include("../../includes/classes/Device.php");
+	include("../partials/a2-header.php");
+	include("../partials/a2-navigation.php");
 
-	//$con = mysqli_connect("10.8.40.43", "assetMgmt", "assetPassword", "wcd_asset_management");
-	
 	if(isset($_GET['deviceID'])) {
 		$deviceID = $_GET['deviceID'];
 	}
@@ -26,8 +26,7 @@
 
 
 
-	include("../partials/a2-header.php");
-	include("../partials/a2-navigation.php");
+
 ?>
 
 <section class="viewDevice">

@@ -3,7 +3,7 @@
 	include("../../includes/classes/Account.php");
 	$account = new Account($con);
 	include("../partials/a-header.php");
-	include("../partials/navigation.php");
+	include("../partials/a1-navigation.php");
 
 	$query = "SELECT * FROM `users`";
 	$result = mysqli_query($con, $query);
