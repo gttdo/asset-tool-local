@@ -31,7 +31,10 @@ $userImage = $users['image'];
 </span>
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-item welcomeText font_15">Welcome <?php echo $userImage ?></li>
+    <li class="nav-item welcomeText font_15">Welcome <?php echo $userName ?>!
+      <span class="ml-2">
+        <img class="image_icon" src="<?php echo $userImage ?>" alt="user icon">
+      </span></li>
     <li class="nav-item logoutText font_15">
       <a class="logoutText" href="/wcd-asset-tool">Logout</a>
     </li>

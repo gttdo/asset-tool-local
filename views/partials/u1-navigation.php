@@ -35,7 +35,7 @@ $userImage = $users['image'];
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav ml-auto">
     <li class="nav-item welcomeText font_15">
-      Welcome <?php echo $userName ?>
+      Welcome <?php echo $userName ?>!
       <span class="ml-2">
         <img class="image_icon" src="<?php echo $userImage ?>" alt="user icon">
       </span>

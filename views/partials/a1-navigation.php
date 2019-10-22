@@ -11,10 +11,12 @@ $userImage = $users['image'];
 
 <style>
 .image_icon {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #333;
+  border: 2px solid #eee;
+  padding: .5rem;
 }
 </style>
 
@@ -29,7 +31,11 @@ $userImage = $users['image'];
 </span>
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-item welcomeText font_15">Welcome <?php echo $userImage ?></li>
+    <li class="nav-item welcomeText font_15">Welcome <?php echo $userLoggedIn ?>!
+      <span class="ml-2">
+        <img class="image_icon" src="../../public/images/wcd_favicon.png" alt="user icon" />
+      </span>
+    </li>
     <li class="nav-item logoutText font_15">
       <button id="logoutBtn" class="nav_button" onclick="logout()" type="button" name="button">Logout</button>
     </li>
