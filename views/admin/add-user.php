@@ -27,7 +27,7 @@
 				<div class="form-group mb-3">
 					<label class="form_label font_15" for="create_avatar">Image URL:</label>
 					<?php echo $account->getError(Constants::$imageFiletype); ?>
-					<input id="create_avatar" class="form-control" type="text" name="create_avatar" value="<?php getInputValue('create_avatar') ?>" placeholder="Enter image url" required/>
+					<input id="create_avatar" class="form-control" type="text" name="create_avatar" value="https://img.pngio.com/avatar-inside-a-circle-free-icon-avatar-png-512_512.png" placeholder="Enter image url" required/>
 				</div>
 				<div class="form-group mb-3">
 					<label class="form_label font_15" for="create_username">Full Name:</label>

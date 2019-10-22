@@ -83,7 +83,7 @@ error_reporting(E_ALL);
         <div style="display: none;" class="form-group mb-3">
           <label class="form_label font_15" for="register_avatar">Image URL:</label>
           <?php echo $account->getError(Constants::$imageFiletype); ?>
-          <input id="register_avatar" class="form-control" type="text" name="register_avatar" placeholder="image" value="https://www.pngarts.com/files/3/Avatar-Transparent-Image.png" required/>
+          <input id="register_avatar" class="form-control" type="text" name="register_avatar" placeholder="image" value="https://img.pngio.com/avatar-inside-a-circle-free-icon-avatar-png-512_512.png" required/>
 				</div>
         <div class="form-group mb-3">
           <label class="form_label font_15" for="register_name">Full Name:</label>

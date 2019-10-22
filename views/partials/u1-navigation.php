@@ -11,10 +11,18 @@ $usersQuery = "SELECT * FROM users WHERE email = '$userLoggedIn'";
 $usersQueryResult = mysqli_query($con, $usersQuery);
 $users = mysqli_fetch_array($usersQueryResult);
 $userName = $users['name'];
-
-
+$userImage = $users['image'];
 
 ?>
+
+<style>
+.image_icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+</style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 <div class="container-fluid">
@@ -26,7 +34,12 @@ $userName = $users['name'];
 </span>
 <div class="collapse navbar-collapse">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-item welcomeText font_15">Welcome <?php echo $userName ?></li>
+    <li class="nav-item welcomeText font_15">
+      Welcome <?php echo $userName ?>
+      <span class="ml-2">
+        <img class="image_icon" src="<?php echo $userImage ?>" alt="user icon">
+      </span>
+    </li>
     <li class="nav-item logoutText font_15">
       <button class="nav_button" onclick="logout()" type="button" name="logout_button">Logout</button>
     </li>
