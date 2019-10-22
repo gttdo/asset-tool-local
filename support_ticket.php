@@ -37,7 +37,7 @@
 
     function clean_string($string) {
       $bad = array("content-type", "bcc:", "to:", "cc:", "href");
-      return str_replace($bad,"",$string);
+      return str_replace($bad, "", $string);
     }
 
     $email_message .= "Name: " . clean_string($name) . "\n";

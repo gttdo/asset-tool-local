@@ -18,6 +18,12 @@ error_reporting(E_ALL);
 
 
   if(isset($_POST["register_button"])) {
+    $avatar = sanitizeEmailForm($_POST['register_avatar']);
+    $name = sanitizeUsernameForm($_POST['register_name']);
+    $email = sanitizeRegularForm($_POST['register_email']);
+    $password = sanitizePasswordForm($_POST['register_password']);
+
+
 
     $emailTo_admin = "jacpare@gap.com";
     $email_subject = "WCD Asset Tool New Registration Confirmation";
@@ -60,12 +66,22 @@ error_reporting(E_ALL);
     $recipients = array($emailTo_admin, $emailTo_newUser);
     $sendAll = implode(',', $recipients);
 
-    $email_headers = "WCD Asset Tool\r\n"."Reply-To: " . $emailTo_admin . "\r\n" . "X-Mailer: PHP/" . phpversion();
+    $email_headers = "WCD Asset Tool\r\n" . "Reply-To: " . $emailTo_admin . "\r\n" . "X-Mailer: PHP/" . phpversion();
     @mail($sendAll, $email_subject, $email_message, $email_headers);
+
+    $wasSuccessful = $account->register($avatar, $name, $email, $password);
+
+    if($wasSuccessful == true) {
+      $_SESSION['userLoggedIn'] = $email;
+      //header("Location: register.php");
+    }
 ?>
-    <div class="m-auto success_msg">
-      <span class="font_20 m-auto success_msg-text">Your account was successfully created!</span>
-    </div>
+<div class="m-auto success_msg">
+  <span class="font_15 m-auto success_msg-text">Your account was successfully created! <br>
+    Please login to access your account. <br>
+    <a class="btn black_button mt-3 mb-5" href="/tools/wcd-asset-tool/index.php">Login</a>
+  </span>
+</div>
 <?php
   }
 ?>
