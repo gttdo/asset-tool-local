@@ -23,8 +23,10 @@
 }
 
 .image_icon {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #333;
+  border: 2px solid #eee;
+  padding: .5rem;
 }

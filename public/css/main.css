@@ -13,6 +13,9 @@ a {
   a:hover {
     color: inherit; }
 
+.main_wrapper {
+  position: relative; }
+
 .asset_links {
   margin: 2rem auto; }
   .asset_links a {
@@ -199,6 +202,9 @@ hr {
     width: 70%;
     margin: auto; }
 
+.footer {
+  width: 100%; }
+
 .edit_buttons {
   text-align: left; }
 
@@ -279,10 +285,12 @@ hr {
     width: 100%; }
 
 .image_icon {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
-  background-color: #ccc; }
+  background-color: #333;
+  border: 2px solid #eee;
+  padding: .5rem; }
 
 #landing .button_container {
   padding-top: 3rem; }

@@ -55,7 +55,7 @@
   }
   ?>
 
-
+<div class="main_wrapper">
   <section class="newUser">
 	<div class="container">
 	<div class="row"><a class="btn black_button" href="/wcd-asset-tool">Go Back</a></div>
@@ -99,3 +99,4 @@
 <?php
 include("views/partials/footer.php");
 ?>
+</div>

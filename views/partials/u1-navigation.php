@@ -15,15 +15,6 @@ $userImage = $users['image'];
 
 ?>
 
-<style>
-.image_icon {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #ccc;
-}
-</style>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 <div class="container-fluid">
 <span style="color: white;" class="mr-3 font_20">BETA</span>

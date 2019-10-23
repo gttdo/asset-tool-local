@@ -14,16 +14,6 @@ $userImage = $users['image'];
 
  ?>
 
- <style>
- .image_icon {
-   height: 35px;
-   width: 35px;
-   border-radius: 50%;
-   background-color: #333;
-   border: 2px solid #eee;
-   padding: .5rem;
- }
- </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 <div class="container-fluid">

@@ -25,7 +25,7 @@
   }
 ?>
 
-
+<div class="main_wrapper">
 <div class="container">
 	<section id="landing">
 
@@ -59,3 +59,4 @@
 <?php
   include("views/partials/footer.php");
 ?>
+</div>
