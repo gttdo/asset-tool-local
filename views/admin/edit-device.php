@@ -14,31 +14,11 @@
 		echo "ID is not set";
 	}
 
-
-
 	function getInputValue($name) {
 		if(isset($_POST[$name])) {
 			echo $_POST[$name];
 		}
 	}
-
-	if(isset($_POST['editDevice_button'])) {
-		$deviceName = $_POST['device_name'];
-		$deviceImage = $_POST['device_image'];
-		$deviceSerial = $_POST['device_serial'];
-		$deviceAvail = $_POST['device_availability'];
-		$deviceNotes = $_POST['device_notes'];
-		$deviceCat = $_POST['device_category'];
-		$deviceID = $_GET['deviceID'];
-
-		$editDeviceQuery = "UPDATE devices SET name='$deviceName', image='$deviceImage', serialNo='$deviceSerial', availability='$deviceAvail', notes='$deviceNotes', category='$deviceCat' WHERE id='$deviceID'";
-		$editDeviceResult = mysqli_query($con, $editDeviceQuery);
-
-		header("Location: /wcd-asset-tool/views/admin/admin-view-devices.php");
-
-	}
-
-
 ?>
 <section class="editDevice">
 	<div class="container form_container">
@@ -75,9 +55,12 @@
 				<div class="form-group mb-5">
 					<label class="font_15" for="device_category">Category:</label>
 					<select id="device_category" class="form-control" name="device_category" value="">
-						<option>mobile</option>
+						<option>ios</option>
+						<option>android</option>
 						<option>tablet</option>
-						<option>laptop</option>
+						<option>ipad</option>
+						<option>pc</option>
+						<option>macbook</option>
 					</select>
 				</div>
 				<button type="submit" name="editDevice_button" class="btn btn-lg black_button btn-block m-auto">Submit!</button>

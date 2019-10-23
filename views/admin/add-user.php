@@ -12,9 +12,9 @@
 			echo $_POST[$name];
 		}
 	}
-
-
 ?>
+
+
 <section class="newUser">
 	<div class="container">
 	<div class="row"><a class="btn black_button" href="admin-view-users.php">Go Back</a></div>

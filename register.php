@@ -8,14 +8,12 @@ error_reporting(E_ALL);
   $account = new Account($con);
 
   include("views/partials/main-header.php");
-  include("includes/handlers/register-handler-test.php");
+  include("includes/handlers/register-handler.php");
   function getInputValue($name) {
     if(isset($_POST[$name])) {
       echo $_POST[$name];
     }
   }
-
-
 ?>
 
 
