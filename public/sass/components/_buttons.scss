@@ -50,6 +50,17 @@
 	border-radius: 2rem;
 	width: 10vw;
 	font-size: 1.5rem;
+	
+	@include respond(phone) {
+		width: 30vw;
+	}
+	@include respond(tab-port) {
+		width: 12vw;
+	}
+	@include respond(big){
+		width: 8vw;
+	}
+
 }
 
 .search {

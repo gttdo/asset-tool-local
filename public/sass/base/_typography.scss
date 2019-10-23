@@ -5,6 +5,10 @@
 .header_primary,
 .font_22{
 	font-size: 2.2rem;
+
+	@include respond(phone) {
+		font-size: 1.8rem;
+	}
 }
 
 .font_30 {
@@ -16,6 +20,10 @@
 .font_20,
 .card-title {
 	font-size: 2rem;
+
+	@include respond(phone){
+		font-size: 1.5rem;
+	}
 }
 
 .font_18,

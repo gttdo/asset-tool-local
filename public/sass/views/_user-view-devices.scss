@@ -13,6 +13,10 @@
     min-height: 32rem;
     padding-bottom: 3rem;
 
+    @include respond(tab-port) {
+      min-height: 28rem;
+    }
+
     &-img-top {
       display: block;
       max-width: 10rem;

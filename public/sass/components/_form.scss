@@ -2,16 +2,23 @@
 	position: relative;
 
 	&_form {
-		width: 50%;
 		padding: 6rem;
 		margin: 10rem auto;
 
 
 		@include box-shadow;
-		@include for-mobile {
+
+		@include respond(phone) {
 			width: 100%;
+			margin: 5rem auto;
+		}
+		@include respond(tab-port) {
+			width: 80%;
 		}
 
+		@include respond(desktop) {
+			width: 50%;
+		}
 
 	}
 }
@@ -27,6 +34,10 @@
   @include box-shadow;
   width: 60%;
   margin: 5rem auto;
+
+	@include respond(phone){
+		width: 100%;
+	}
 
 	&-wrapper {
 		width: 70%;
