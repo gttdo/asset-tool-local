@@ -27,7 +27,7 @@
 		<h1 class="text-center pt-4" style="width: 100%; margin: 1rem auto">Edit Device</h1>
 
 		<div class="form_container-wrapper">
-			<form action="/wcd-asset-tool/views/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST" style="margin: 1rem auto" class="pb-4">
+			<form action="/wcd-asset-tool/views/admin/edit-device.php/<?php echo  "?deviceID=" . $deviceID ?>" method="POST" style="margin: 1rem auto" class="pb-4">
 				<div class="form-group">
 					<label class="font_15" for="device_name">Name:</label>
 					<input id="device_name" class="form-control" type="text" name="device_name" placeholder="Device name" value="<?php getInputValue('device_name') ?>"  required/>

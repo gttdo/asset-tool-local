@@ -2,7 +2,7 @@
   include("includes/config.php");
   include("views/partials/main-header.php");
   include("includes/handlers/ticket-handler.php");
-  ?>
+?>
 
 
 <div class="main_wrapper">
